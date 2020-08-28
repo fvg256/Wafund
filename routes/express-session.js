@@ -5,6 +5,7 @@ var session = require('express-session');
 var app = express()
 var secure = require('../Secure/key.json');
 
+if(secure)
 app.use(session({
     secret: secure.session_secret,
     resave: false,
